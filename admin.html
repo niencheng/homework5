@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Admin</title>
+  <link rel="stylesheet" href="./assets/style/all.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <aside class="col-2 bg-secondary position-sticky top-0">
+        <div class="h-100 d-flex flex-column justify-content-between ps-5">
+          <ul class="list-unstyled">
+            <li class="pb-5 pt-5"><img src="assets/images/logo-ANSWER.svg" alt=""></li>
+            <li class="aside-item pb-4"><a href="###" class="d-flex align-items-center fw-bolder"><i class="material-icons pe-3">insert_chart</i>Dashboard</a></li>
+            <li class="aside-item pb-4"><a href="###" class="d-flex align-items-center fw-bolder"><i class="material-icons pe-3">forum</i>Question</a></li>
+            <li class="aside-item pb-4"><a href="index.html" class="d-flex align-items-center fw-bolder"><i class="material-icons pe-3">assignment</i>Assignment</a></li>
+            <li class="aside-item pb-4"><a href="###" class="d-flex align-items-center fw-bolder"><i class="material-icons pe-3">video_library</i>Course</a><li>
+            <li class="aside-item pb-4"><a href="admin.html" class="d-flex align-items-center fw-bolder"><i class="material-icons pe-3">supervisor_account</i>Admin</a></li>
+            <li class="aside-item pb-4"><a href="###" class="d-flex align-items-center fw-bolder"><i class="material-icons pe-3">settings</i>Settings</a></li>
+          </ul>
+          <div class="d-flex">
+            <img src="assets/images/andychen.jpeg" alt="" class="user-icon me-2">
+            <div>
+              <p class="mb-0 fw-bolder">Andy Chen</p>
+              <p class="text-black-50 small-font-size">andy0401@mail.com</p>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <div class="main col p-5">
+        <div class="row justify-content-between mb-5">
+    <div class="col-4 d-flex align-items-center">
+        <h3 class="fw-bolder me-5">Admin</h3>
+        <button type="button" class="btn d-flex align-items-center px-2 fw-bold" data-bs-toggle="modal" data-bs-target="#addNewAdmin">
+            <i class="material-icons ms-2">add</i>
+            Add New Admin
+        </button>
+        <div class="modal fade" id="addNewAdmin" tabindex="-1" aria-labelledby="addNewAdmin" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <form class="modal-content" action="">
+                  <div class="modal-header border-0 p-4">
+                    <h5 class="modal-title fw-bolder">New Admin</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <h5 class="p-2 fw-bolder">Account</h5>
+                    <label for="name" class="d-block p-2">Name</label>
+                    <input type="text" name="name" id="name" class="p-2 mb-2 form-control-lg w-100">
+                    <label for="mail" class="d-block p-2">Email</label>
+                    <input type="text" name="mail" id="mail" class="p-2 mb-2 form-control-lg w-100">
+                    <h5 class="p-2 fw-bolder border-top pt-4 mt-4">Verification</h5>
+                    <p class="fw-bolder">
+                        <i class="material-icons me-2 align-top text-danger">warning</i>
+                        Unverified
+                    </p>
+                    <button type="button" class="btn btn-outline-primary w-100 p-3">
+                        Send Verification Mail
+                    </button>
+                    <h5 class="p-2 fw-bolder border-top pt-4 mt-4">Access Level</h5>
+                    <select name="level" id="level" class="text-black-50 form-select-lg w-100 py-3">
+                        <option selected>-Choose access level-</option>
+                        <option value="Admin">Admin</option>
+                        <option value="2222">2222</option>
+                        <option value="3333">3333</option>
+                    </select>
+                    <h5 class="p-2 fw-bolder border-top pt-4 mt-4">Custom Access</h5>
+                    <div>
+                        <input class="form-check-input p-2 m-2" type="checkbox" value="lecture" id="lecture">
+                        <label class="form-check-label m-1 fw-bolder" for="lecture">Lecture</label>
+                    </div>
+                    <div>
+                        <input class="form-check-input p-2 m-2" type="checkbox" value="Coupon" id="Coupon">
+                        <label class="form-check-label m-1 fw-bolder" for="Coupon">Coupon</label>
+                    </div>
+                    <div>
+                        <input class="form-check-input p-2 m-2" type="checkbox" value="Message" id="Message">
+                        <label class="form-check-label m-1 fw-bolder" for="Message">Message</label>
+                    </div>
+                    <div>
+                        <input class="form-check-input p-2 m-2" type="checkbox" value="Setting" id="Setting">
+                        <label class="form-check-label m-1 fw-bolder" for="Setting">Setting</label>
+                    </div>
+                    <div>
+                        <input class="form-check-input p-2 m-2" type="checkbox" value="task-menu" id="task-menu">
+                        <label class="form-check-label m-1 fw-bolder" for="task-menu">Task menu</label>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Add</button>
+                  </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-1 d-flex justify-content-between align-items-center">
+        <i class="material-icons d-block">search</i>
+        <i class="material-icons d-block">notifications_active</i>
+    </div>
+</div>
+<table class="table table-hover align-middle mb-5">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Verified</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">#1</th>
+            <td>Emir Wicks</td>
+            <td>emir.wicks@mail.com</td>
+            <td>Yes</td>
+            <td class="text-end">
+                <button type="button" class="btn p-0" data-bs-toggle="modal" data-bs-target="#card">
+                    <i class="material-icons ms-3 pt-2">remove_red_eye</i>
+                </button>
+            </td>
+            <td class="text-end">
+                <button type="button" class="btn p-0" data-bs-toggle="modal" data-bs-target="#cardedit">
+                    <i class="material-icons ms-3 pt-2">edit</i>
+                </button>
+            </td>
+            <div class="modal fade" id="card" tabindex="-1" aria-labelledby="card" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="d-flex">
+                        <img class="m-4" src="assets/images/emir.jpeg" style="width: 180px;height: 145px;" alt="">
+                        <div class="w-50">
+                            <div class="modal-header border-0 p-0 mt-4">
+                                <h6 class="modal-title">#1</h6>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body p-0 mt-2">
+                                <h6>Admin</h6>
+                                <h5>Emir Wicks</h5>
+                                <p class="small-font-size text-black-50 m-0">emir.wicks@mail.com</p>
+                                <div class="d-flex justify-content-between">
+                                    <button type="button" class="btn bg-secondary" data-bs-toggle="collapse" data-bs-target="#card-footer" aria-expanded="false" aria-controls="card-footer">
+                                        Verified
+                                    </button>
+                                    <button type="button" class="btn" data-bs-toggle="collapse" data-bs-target="#card-footer" aria-expanded="false" aria-controls="card-footer">
+                                        <i class="material-icons ms-2">expand_more</i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="modal-footer collapse card-footer border-0 bg-white" id="card-footer">
+                                <button type="button" class="btn btn-outline-danger px-4" data-bs-dismiss="modal">Deactivate</button>
+                                <button type="button" class="btn btn-primary px-4">Edit</button>
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+            </div>
+            <div class="modal fade" id="cardedit" tabindex="-1" aria-labelledby="cardedit" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content" action="">
+                      <div class="modal-header border-0 p-4">
+                        <h5 class="modal-title fw-bolder">Edit Admin</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <h5 class="p-2 fw-bolder">Account</h5>
+                        <label for="name" class="d-block p-2">Name</label>
+                        <input type="text" name="name" id="name" class="p-2 mb-2 form-control-lg w-100" value="Emir Wicks">
+                        <label for="mail" class="d-block p-2">Email</label>
+                        <input type="text" name="mail" id="mail" class="p-2 mb-2 form-control-lg w-100" value="emir.wicks@mail.com">
+                        <h5 class="p-2 fw-bolder border-top pt-4 mt-4">Verification</h5>
+                        <div class="d-flex justify-content-between">
+                            <p class="fw-bolder">
+                                <i class="material-icons me-2 align-top text-primary">check_circle</i>
+                                Verified
+                            </p>
+                            <p class="fw-bolder">2020/4/12</p>
+                        </div>
+                        <button type="button" class="btn btn-outline-primary w-100 p-3" disabled>
+                            Send Verification Mail
+                        </button>
+                        <h5 class="p-2 fw-bolder border-top pt-4 mt-4">Access Level</h5>
+                        <select name="level" id="level" class="text-black-70 form-select-lg w-100 py-3">
+                            <option disabled>-Choose access level-</option>
+                            <option value="Admin" selected>Admin</option>
+                            <option value="2222">2222</option>
+                            <option value="3333">3333</option>
+                        </select>
+                        <h5 class="p-2 fw-bolder border-top pt-4 mt-4">Custom Access</h5>
+                        <div>
+                            <input class="form-check-input p-2 m-2" type="checkbox" value="lecture" id="lecture">
+                            <label class="form-check-label m-1 fw-bolder" for="lecture">Lecture</label>
+                        </div>
+                        <div>
+                            <input class="form-check-input p-2 m-2" type="checkbox" value="Coupon" id="Coupon">
+                            <label class="form-check-label m-1 fw-bolder" for="Coupon">Coupon</label>
+                        </div>
+                        <div>
+                            <input class="form-check-input p-2 m-2" type="checkbox" value="Message" id="Message">
+                            <label class="form-check-label m-1 fw-bolder" for="Message">Message</label>
+                        </div>
+                        <div>
+                            <input class="form-check-input p-2 m-2" type="checkbox" value="Setting" id="Setting">
+                            <label class="form-check-label m-1 fw-bolder" for="Setting">Setting</label>
+                        </div>
+                        <div>
+                            <input class="form-check-input p-2 m-2" type="checkbox" value="task-menu" id="task-menu">
+                            <label class="form-check-label m-1 fw-bolder" for="task-menu">Task menu</label>
+                        </div>
+                        <h5 class="p-2 fw-bolder border-top pt-4 mt-4">Deactivate Account</h5>
+                        <p class="fw-bolder text-danger">
+                            <i class="material-icons me-2 align-top text-danger">warning</i>
+                            This cannot be undone!
+                        </p>
+                        <button type="button" class="btn btn-outline-danger w-100 p-3">
+                            Deactivate This Account
+                        </button>
+                      </div>
+                      <div class="modal-footer border-0">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary">Update</button>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </tr>
+        <tr>
+            <th scope="row">#2</th>
+            <td>Zaina Goldsmith</td>
+            <td>zaina.goldsmith@mail.com</td>
+            <td>Yes</td>
+            <td class="text-end">
+            <button type="button" class="btn p-0">
+                <i class="material-icons ms-3 pt-2">remove_red_eye</i>
+            </button>
+            </td>
+            <td class="text-end">
+            <button type="button" class="btn p-0">
+                <i class="material-icons ms-3 pt-2">edit</i>
+            </button>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">#3</th>
+            <td>Mahima Lopez</td>
+            <td>mahima.lopez@mail.com</td>
+            <td>Yes</td>
+            <td class="text-end">
+            <button type="button" class="btn p-0">
+                <i class="material-icons ms-3 pt-2">remove_red_eye</i>
+            </button>
+            </td>
+            <td class="text-end">
+            <button type="button" class="btn p-0">
+                <i class="material-icons ms-3 pt-2">edit</i>
+            </button>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">#4</th>
+            <td>Pharrell Murray</td>
+            <td>pharrell.murray@mail.com</td>
+            <td>Yes</td>
+            <td class="text-end">
+                <button type="button" class="btn p-0">
+                    <i class="material-icons ms-3 pt-2">remove_red_eye</i>
+                </button>
+            </td>
+            <td class="text-end">
+                <button type="button" class="btn p-0">
+                    <i class="material-icons ms-3 pt-2">edit</i>
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">#5</th>
+            <td>annika mcbride</td>
+            <td>annika.mcbride@mail.com</td>
+            <td>Yes</td>
+            <td class="text-end">
+            <button type="button" class="btn p-0">
+                <i class="material-icons ms-3 pt-2">remove_red_eye</i>
+            </button>
+            </td>
+            <td class="text-end">
+            <button type="button" class="btn p-0">
+                <i class="material-icons ms-3 pt-2">edit</i>
+            </button>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">#6</th>
+            <td>Fatimah Clark</td>
+            <td>fatimah.clark@mail.com</td>
+            <td>Yes</td>
+            <td class="text-end">
+            <button type="button" class="btn p-0">
+                <i class="material-icons ms-3 pt-2">remove_red_eye</i>
+            </button>
+            </td>
+            <td class="text-end">
+            <button type="button" class="btn p-0">
+                <i class="material-icons ms-3 pt-2">edit</i>
+            </button>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">#7</th>
+            <td>Klaudia Rhodes</td>
+            <td>klaudia.rhodes@mail.com</td>
+            <td>Yes</td>
+            <td class="text-end">
+                <button type="button" class="btn p-0">
+                    <i class="material-icons ms-3 pt-2">remove_red_eye</i>
+                </button>
+            </td>
+            <td class="text-end">
+                <button type="button" class="btn p-0">
+                    <i class="material-icons ms-3 pt-2">edit</i>
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">#8</th>
+            <td>Tillie Lucero</td>
+            <td>tillie.lucero@mail.com</td>
+            <td>Yes</td>
+            <td class="text-end">
+            <button type="button" class="btn p-0">
+                <i class="material-icons ms-3 pt-2">remove_red_eye</i>
+            </button>
+            </td>
+            <td class="text-end">
+            <button type="button" class="btn p-0">
+                <i class="material-icons ms-3 pt-2">edit</i>
+            </button>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">#9</th>
+            <td>Sabrina Stephenson</td>
+            <td>sabrina.Stephenson@mail.com</td>
+            <td>Yes</td>
+            <td class="text-end">
+            <button type="button" class="btn p-0">
+                <i class="material-icons ms-3 pt-2">remove_red_eye</i>
+            </button>
+            </td>
+            <td class="text-end">
+            <button type="button" class="btn p-0">
+                <i class="material-icons ms-3 pt-2">edit</i>
+            </button>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">#10</th>
+            <td>Annie Smith</td>
+            <td>annie.Smith@mail.com</td>
+            <td>Yes</td>
+            <td class="text-end">
+            <button type="button" class="btn p-0">
+                <i class="material-icons ms-3 pt-2">remove_red_eye</i>
+            </button>
+            </td>
+            <td class="text-end">
+            <button type="button" class="btn p-0">
+                <i class="material-icons ms-3 pt-2">edit</i>
+            </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<ul class="list-unstyled d-flex justify-content-end page">
+    <li class="border border-primary"><a href="###" class="d-block px-2 py-2"><i class="material-icons d-block">chevron_left</i></a></li>
+    <li class="border border-primary bg-primary"><a href="###" class="d-block px-3 py-2 text-white">1</a></li>
+    <li class="border border-primary"><a href="###" class="d-block px-3 py-2">2</a></li>
+    <li class="border border-primary"><a href="###" class="d-block px-3 py-2">3</a></li>
+    <li class="border border-primary"><a href="###" class="d-block px-2 py-2"><i class="material-icons d-block">chevron_right</i></a></li>
+</ul>
+
+      </div>
+    </div>
+  </div>
+  <script src="./assets/js/vendors.js"></script>
+  <script src="./assets/js/all.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
+</html>
